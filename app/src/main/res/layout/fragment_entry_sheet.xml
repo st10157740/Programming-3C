@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EntrySheet">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editEntryDescription"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Enter Description"
+            android:padding="12dp"
+            android:paddingEnd="48dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editEntryTitle" />
+
+        <EditText
+            android:id="@+id/editEntryAmount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Enter Amount"
+            android:inputType="number"
+            android:padding="12dp"
+            android:paddingEnd="48dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+        <TextView
+            android:id="@+id/txtEntryDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/edittext_background"
+            android:text="Select Date"
+            android:padding="12dp"
+            android:paddingEnd="48dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editEntryAmount" />
+
+        <EditText
+            android:id="@+id/editEntryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Enter Title of Entry"
+            android:inputType="text"
+            android:padding="12dp"
+            android:paddingEnd="48dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSelectCategory" />
+
+        <ImageView
+            android:id="@+id/editGallery"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Icon"
+            android:src="@drawable/image"
+            app:layout_constraintBottom_toBottomOf="@+id/editEntryDescription"
+            app:layout_constraintEnd_toEndOf="@+id/editEntryDescription"
+            app:layout_constraintTop_toTopOf="@+id/editEntryDescription"
+            app:layout_constraintVertical_bias="0.838" />
+
+        <ImageView
+            android:id="@+id/editCamera"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Icon"
+            android:src="@drawable/camera"
+            app:layout_constraintBottom_toBottomOf="@+id/editEntryDescription"
+            app:layout_constraintEnd_toEndOf="@+id/editEntryDescription"
+            app:layout_constraintTop_toTopOf="@+id/editEntryDescription"
+            app:layout_constraintVertical_bias="0.08" />
+
+        <ImageView
+            android:id="@+id/editDate"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Icon"
+            android:src="@drawable/calendar"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEntryDate"
+            app:layout_constraintEnd_toEndOf="@+id/txtEntryDate"
+            app:layout_constraintTop_toTopOf="@+id/txtEntryDate" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/green"
+            android:text="Add Entry"
+            android:textColor="@color/white"
+            app:cornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/displayImage"
+            app:strokeColor="@color/green"
+            app:strokeWidth="2dp" />
+
+        <ImageView
+            android:id="@+id/displayImage"
+            android:layout_width="98dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/border_display_image"
+            android:src="@android:drawable/ic_menu_camera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEntryDate" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnSelectCategory"
+            android:layout_width="285dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/green"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="37dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/camera"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.666" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Category"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editEntryDescription" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Entry Type"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/radioIncomeType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Income" />
+
+            <RadioButton
+                android:id="@+id/radioExpenseType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Expense" />
+
+        </RadioGroup>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
